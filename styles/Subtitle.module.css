@@ -2,7 +2,7 @@
   color: #d28c01!important;
   font-weight: 400;
   margin-left: 40px;
-  margin-bottom: 55px;
+  margin-bottom: 80px;
   position: relative;
 }
 
@@ -25,6 +25,6 @@
 
 @media only screen and (max-width: 576px) {
   .section__subtitle {
-    margin-top: 75px;
+    margin-top: 150px;
   }
 }
