@@ -31,9 +31,9 @@ const Accueil = () => {
               <SectionSubtitle subtitle="Hello" />
 
               <div>
-                <h2 className={`${classes.title}`}>Welcome to my portfolio</h2>
+                <h1 className={`${classes.title}`}>Welcome to my portfolio</h1>
                 <div className={`${classes.writer}`}>
-                  <h3 className="text-2x1 mt-3 text bg[#d28c01]">
+                  <h2 className="text-2x1 mt-3 text bg[#d28c01]">
                     <Typewriter
                       options={{
                         strings: [
@@ -50,7 +50,7 @@ const Accueil = () => {
                         loop: true,
                       }}
                     />
-                  </h3>
+                  </h2>
                 </div>
               </div>
               <p className={`${classes.info}`}>

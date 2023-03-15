@@ -3,6 +3,8 @@ import React from 'react';
 import styles from '../styles/Contact.module.css';
 import Head from 'next/head';
 import { useForm, onErrors } from 'react-hook-form';
+import { useLocale } from '../components/LocalProvider';
+import { useTheme } from '../components/ThemeProvider';
 
 /**
  * @param {import("next").NextApiRequest} request
@@ -10,6 +12,9 @@ import { useForm, onErrors } from 'react-hook-form';
  */
 
 const Contact = () => {
+  const [theme, setTheme] = useTheme();
+  const [local, setLocal] = useLocale();
+
   const { register, handleSubmit, formState: { errors } } = useForm();
   const onSubmit = async (data) => {
 
@@ -41,7 +46,7 @@ const Contact = () => {
         </div>
 
         <h1 className={styles.h1}>Contactez-moi</h1>
-        <form className={styles.form} noValidate onSubmit={handleSubmit(onSubmit, onErrors)}>
+        <form className={styles.form} noValidate onSubmit={handleSubmit(onSubmit)}>
           <label className={styles.label} htmlFor="name">Nom</label>
           <input className={styles.input} type="text" id="name" name="name" noValidate
             {...register("name",
