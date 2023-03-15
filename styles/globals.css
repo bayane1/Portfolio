@@ -62,6 +62,7 @@ h2 {
 
 footer {
   width: 100%;
+  position: fixed;
   bottom: 0;
   margin-top: 20px;
   padding-bottom: 10px;

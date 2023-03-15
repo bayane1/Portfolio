@@ -33,7 +33,12 @@ const Contact = () => {
         <meta proprety="org:image" content='http://localhost:3000/public/images/resto_acceuil.png'></meta>
       </Head>
       <div className={styles.container}>
-
+        <div>
+          {theme}
+        </div>
+        <div>
+          {local}
+        </div>
 
         <h1 className={styles.h1}>Contactez-moi</h1>
         <form className={styles.form} noValidate onSubmit={handleSubmit(onSubmit, onErrors)}>

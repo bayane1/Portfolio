@@ -7,6 +7,7 @@ import profImg from '../public/images/info.png';
 import classes from '../styles/Accueil.module.css';
 import Typewriter from 'typewriter-effect';
 import Head from 'next/head';
+import { FormattedMessage } from 'react-intl';
 
 const Accueil = () => {
   const { download } = useDownloader();
@@ -53,9 +54,7 @@ const Accueil = () => {
                 </div>
               </div>
               <p className={`${classes.info}`}>
-                I am currently a student in my final semester in computer
-                programming. I like the web programing, and I enjoy gaining new
-                information, learning new techniques and developing new skills!.
+                <FormattedMessage id=  "app.index.paragraphe"/>
               </p>
             </div>
           </Col>

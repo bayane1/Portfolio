@@ -5,7 +5,7 @@
  * @param {import("next").NextApiResponse} response
  */
 
-import { mailOptions, transporter } from "./nodemailer";
+import { mailOptions, transporter } from "../../util/nodemailer";
 
 const contact = async (req, res) => {
 
@@ -21,7 +21,7 @@ const contact = async (req, res) => {
     try {
       await transporter.sendMail({
         ...mailOptions,
-        subject: data.sujet,
+        subject:  "Contact de la part de " +  data.name + " - Sujet : " + data.sujet ,
         text: "This is a test string",
         html: "<h1>Test Title</h1><p>Some body tesxt</p>",
 
